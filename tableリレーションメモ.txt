@@ -1,0 +1,4 @@
+board hasMany content
+content belongsTo board
+users hasMany content
+content belongsTo users
