@@ -9,4 +9,8 @@ class BoardController extends Controller
     public function index(){
         
     }
+    
+    public function post(){
+        
+    }
 }
