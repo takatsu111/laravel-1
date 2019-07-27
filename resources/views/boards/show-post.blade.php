@@ -11,15 +11,16 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('boardPost') }}">
                         @csrf
-
+                        <input type="hidden" name="board" value="0">
+                        <input type="hidden" name="user" value="0">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('本文') }}</label>
 
                             <div class="col-md-6">
-                                <textarea rows="10" id="post-content" class="form-control @error('post-content') is-invalid @enderror" name="post-content" value="{{ old('post-content') }}" required autofocus>
+                                <textarea rows="10" id="content" class="form-control @error('content') is-invalid @enderror" name="content" value="{{ old('content') }}" required autofocus>
                                 </textarea>
 
-                                @error('post-content')
+                                @error('content')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
