@@ -7,6 +7,10 @@ use App\Content;
 
 class BoardController extends Controller
 {
+    public function test(){
+        return redirect('/board');
+    }
+    
     public function index(){
         return view('boards.show-post');
     }

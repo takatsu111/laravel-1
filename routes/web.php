@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'BoardController@test')->name('test');
 Route::get('/board', 'BoardController@index')->name('boardList');
 Route::post('/board', 'BoardController@post')->name('boardPost');
