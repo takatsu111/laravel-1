@@ -8,7 +8,7 @@ use App\Content;
 class BoardController extends Controller
 {
     public function index(){
-        return redirect('/board');
+        return view('boards.show-post');
     }
     
     public function post(Request $req){
