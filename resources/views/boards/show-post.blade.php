@@ -6,6 +6,18 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <div class="card-header">{{ "todo:掲示板名" }}</div>
+                @foreach ($contents as $content)
+                
+                <div style="border-bottom:solid;">
+                    <p>{{$content["user"]}}さん</p>
+                    <p>{{$content["content"]}}</p>
+                    <p style="margin:0;">{{$content["created_at"]}}----------------いいね:{{$content["good"]}}</p>
+                </div>
+
+                @endforeach
+            </div>
+            <div class="card">
                 <div class="card-header">{{ __('投稿') }}</div>
 
                 <div class="card-body">

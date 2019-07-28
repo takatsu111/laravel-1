@@ -12,7 +12,8 @@ class BoardController extends Controller
     }
     
     public function index(){
-        return view('boards.show-post');
+        $contents = Content::all();
+        return view('boards.show-post',['contents'=>$contents]);
     }
     
     public function post(Request $req){
