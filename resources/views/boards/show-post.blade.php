@@ -29,7 +29,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('本文') }}</label>
 
                             <div class="col-md-6">
-                                <textarea rows="10" id="content" class="form-control @error('content') is-invalid @enderror" name="content" value="{{ old('content') }}" required autofocus>
+                                <textarea rows="10" id="content" class="form-control @error('content') is-invalid @enderror" name="content" required autofocus>
                                 </textarea>
 
                                 @error('content')
