@@ -9,7 +9,7 @@
                 <div class="card-header">{{ "todo:掲示板名" }}</div>
                 @foreach ($contents as $content)
                 
-                <div style="border-bottom:solid;">
+                <div class="c-board_content" >
                     <p>{{$content["user"]}}さん</p>
                     <p>{{$content["content"]}}</p>
                     <p style="margin:0;">{{$content["created_at"]}}----------------いいね:{{$content["good"]}}</p>

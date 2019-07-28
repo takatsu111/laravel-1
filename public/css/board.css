@@ -1,0 +1,7 @@
+ div.c-board_content {
+     border-bottom: solid 1px;
+ }
+
+ div.c-board_content:last-child {
+     border-bottom:none;
+ }
