@@ -1,7 +1,40 @@
- div.c-board_content {
-     border-bottom: solid 1px;
- }
+p {
+    margin: 0;
+}
 
- div.c-board_content:last-child {
-     border-bottom:none;
- }
+.c-board_content {
+    border-bottom: solid 1px;
+}
+
+.c-board_content:last-child {
+    border-bottom: none;
+}
+
+.c-title {}
+
+.u-board{
+    margin-bottom:32px;
+}
+
+.p-board p {
+    margin-bottom: 1em;
+}
+
+.p-board .u-content_user {
+    font-weight: bolder;
+}
+
+.p-board .u-daytime_and_good {
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+.p-board .u-daytime_and_good .u-daytime {
+    float: left;
+    margin: 0;
+}
+
+.p-board .u-daytime_and_good .u-good {
+    float: right;
+    margin: 0;
+}

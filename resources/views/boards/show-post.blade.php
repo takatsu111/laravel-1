@@ -5,14 +5,19 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ $board }}</div>
+            <div class="card p-board u-board">
+                <div class="card-header">
+                    <h1 class="c-title">{{ $board }}</h1>
+                </div>
                 @foreach ($contents as $content)
-                
-                <div class="c-board_content" >
-                    <p>{{$content["user"]}}さん</p>
-                    <p>{{$content["content"]}}</p>
-                    <p style="margin:0;">{{$content["created_at"]}}----------------いいね:{{$content["good"]}}</p>
+
+                <div class="c-board_content">
+                    <p class="c-paragraph u-content_user">{{$content["user"]}}さん</p>
+                    <p class="c-paragraph u-content_text">{{$content["content"]}}</p>
+                    <div class="u-daytime_and_good">
+                        <p class="c-paragraph u-daytime">{{$content["created_at"]}}</p>
+                        <p class="c-paragraph u-good">いいね:{{$content["good"]}}</p>
+                    </div>
                 </div>
 
                 @endforeach
