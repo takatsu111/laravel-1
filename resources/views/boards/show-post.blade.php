@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ "todo:掲示板名" }}</div>
+                <div class="card-header">{{ $board }}</div>
                 @foreach ($contents as $content)
                 
                 <div class="c-board_content" >
@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('boardPost') }}">
                         @csrf
-                        <input type="hidden" name="board" value="0">
+                        <input type="hidden" name="board" value="{{$board}}">
                         <input type="hidden" name="user" value="0">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('本文') }}</label>
