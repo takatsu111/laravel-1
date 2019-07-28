@@ -25,7 +25,7 @@ class BoardController extends Controller
         $content = new Content;
         $content -> fill($req->all())->save();
         
-        return redirect('/home');
+        return redirect('/board');
         
     }
 }
