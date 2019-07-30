@@ -22,7 +22,8 @@
 
                 @endforeach
             </div>
-            <div class="card">
+            @auth
+            <div class="card p-board_form">
                 <div class="card-header">{{ __('投稿') }}</div>
 
                 <div class="card-body">
@@ -30,11 +31,11 @@
                         @csrf
                         <input type="hidden" name="board" value="{{$board}}">
                         <input type="hidden" name="user" value="0">
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('本文') }}</label>
+                        <div class="form-group row justify-content-center">
 
-                            <div class="col-md-6">
-                                <textarea rows="10" id="content" class="form-control @error('content') is-invalid @enderror" name="content" required autofocus>
+
+                            <div class="col-md-12">
+                                <textarea rows="10" id="content" class="form-control @error('content') is-invalid @enderror" name="content" placeholder="本文" required autofocus>
                                 </textarea>
 
                                 @error('content')
@@ -53,9 +54,10 @@
                             </div>
                         </div>
                     </form>
-
+            @endauth
                 </div>
             </div>
+
         </div>
     </div>
 </div>

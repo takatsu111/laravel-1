@@ -22,6 +22,7 @@
     <link href="{{ asset('css/board.css') }}" rel="stylesheet">
 </head>
 <body>
+   {{date('Y/m/d H:i:s')}}
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
