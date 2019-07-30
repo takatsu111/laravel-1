@@ -38,3 +38,9 @@ p {
     float: right;
     margin: 0;
 }
+
+.p-board_form{
+    position:fixed;
+    left:100px;
+    width:20vw;
+}
