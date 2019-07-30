@@ -41,6 +41,7 @@ p {
 
 .p-board_form{
     position:fixed;
-    left:100px;
     width:20vw;
+    left:100px;
+    top:100px;
 }

@@ -29,8 +29,8 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('boardPost') }}">
                         @csrf
-                        <input type="hidden" name="board" value="{{$board}}">
-                        <input type="hidden" name="user" value="0">
+                        
+                        <input type="hidden" name="board" value="{{ $board['id'] }}">
                         <div class="form-group row justify-content-center">
 
 
@@ -46,7 +46,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-0 justify-content-center">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('投稿') }}
