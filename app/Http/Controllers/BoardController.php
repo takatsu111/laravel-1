@@ -19,7 +19,7 @@ class BoardController extends Controller
     public function index($id = 1){
         if(ctype_digit($id)){
         $board = Board::find($id);
-            if(empty($board)){return view('boards.welcome')->with("flash_message",__("存在しない掲示板です"));}
+            if(empty($board)){return redirect('/')->with("flash_message",__("存在しない掲示板です"));}
         $contents = Content::where('board_id',$id)->orderBy('created_at','desc')->get();
         return view('boards.show-post',['contents'=>$contents,'board'=>$board]);
         }else{
