@@ -16,7 +16,7 @@ class CreateContentTable extends Migration
         Schema::create('content', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('board');
-            $table->bigInteger('user');
+            $table->bigInteger('user_id');
             $table->string('content');
             $table->timestamps();
             $table->boolean('delete')->default(false);

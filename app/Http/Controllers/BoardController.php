@@ -8,15 +8,16 @@ use App\Content;
 class BoardController extends Controller
 {
     public function test(){
-        return redirect('/board/0');
+        return redirect('/board/1');
     }
     
-    public function index($id = 0){
+    public function index($id = 1){
         if(ctype_digit($id)){
+        $board = Board::find($id);
         $contents = Content::where('board',$id)->get();
-        return view('boards.show-post',['contents'=>$contents,'board'=>$id]);
+        return view('boards.show-post',['contents'=>$contents,'board'=>$board]);
         }else{
-            return redirect('/board/0');
+            return redirect('/board/1');
         }
     }
     
