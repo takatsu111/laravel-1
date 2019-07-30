@@ -9,12 +9,13 @@ use App\Board;
 class BoardController extends Controller
 {
     public function test(){
-        return redirect('/board/2');
+        return redirect('/board/1');
     }
     
     public function index($id = 1){
         if(ctype_digit($id)){
         $board = Board::find($id);
+            if(empty($board)){return redirect("/board/1");;}
         $contents = Content::where('board_id',$id)->get();
         return view('boards.show-post',['contents'=>$contents,'board'=>$board]);
         }else{
@@ -26,14 +27,13 @@ class BoardController extends Controller
         $req -> validate([
             'board'=>'integer|required',
             'content'=>'required|string|max:191',
-            'user'=>'required|string|max:191'
         ]);
         
         $content = new Content;
         $content -> fill($req->all())->save();
         $board = $req->input('board');
         
-        return redirect('/board/'.$board);
+        return back();
         
     }
 }
