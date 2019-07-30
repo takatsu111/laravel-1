@@ -9,7 +9,7 @@ use App\Board;
 class BoardController extends Controller
 {
     public function test(){
-        return redirect('/board/1');
+        return redirect('/board/2');
     }
     
     public function index($id = 1){
