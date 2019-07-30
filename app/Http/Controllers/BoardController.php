@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Content;
+use App\Board;
 
 class BoardController extends Controller
 {
@@ -14,7 +15,7 @@ class BoardController extends Controller
     public function index($id = 1){
         if(ctype_digit($id)){
         $board = Board::find($id);
-        $contents = Content::where('board',$id)->get();
+        $contents = Content::where('board_id',$id)->get();
         return view('boards.show-post',['contents'=>$contents,'board'=>$board]);
         }else{
             return redirect('/board/1');
