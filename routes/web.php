@@ -18,6 +18,6 @@
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', 'BoardController@test')->name('test');
+Route::get('/', 'BoardController@welcome')->name('welcome');
 Route::get('/board/{id?}', 'BoardController@index')->name('boardList');
 Route::post('/board/post', 'BoardController@post')->name('boardPost');

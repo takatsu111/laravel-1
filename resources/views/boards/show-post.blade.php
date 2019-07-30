@@ -12,7 +12,7 @@
                 @foreach ($contents as $content)
 
                 <div class="c-board_content">
-                    <p class="c-paragraph u-content_user">{{$content["user_id"]}}さん</p>
+                    <p class="c-paragraph u-content_user">{{$content->user['name']}}さん</p>
                     <p class="c-paragraph u-content_text">{{$content["content"]}}</p>
                     <div class="u-daytime_and_good">
                         <p class="c-paragraph u-daytime">{{$content["created_at"]}}</p>
@@ -30,7 +30,7 @@
                     <form method="POST" action="{{ route('boardPost') }}">
                         @csrf
                         
-                        <input type="hidden" name="board" value="{{ $board['id'] }}">
+                        <input type="hidden" name="board_id" value="{{ $board['id'] }}">
                         <div class="form-group row justify-content-center">
 
 

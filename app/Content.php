@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Content extends Model
 {
-    protected $fillable=['board','user','content','good'];
+    protected $fillable=['board_id','user_id','content','good'];
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
