@@ -10,6 +10,7 @@ use App\Board;
 
 class BoardController extends Controller
 {
+    
     public function welcome(){
         $board = new Board;
         $boards = $board->get();
@@ -38,6 +39,22 @@ class BoardController extends Controller
          Auth::user()->contents()->save($content->fill($request->all()));
         
         return back();
+    }
+    
+    public function new(){
+        return view('boards.create');
+    }
+    
+    public function create(Request $request){
+        $request -> validate([
+            'name'=>'required|string|max:191',
+            'category_id'=>'required|integer',
+        ]);
         
+        $board = new Board;
+        $board -> fill($request->all())->save();
+        $lastId = $board -> id;
+        $board =  Board::find($lastId);
+        $board -> categories() -> sync([$request->input('category_id')]);
     }
 }
