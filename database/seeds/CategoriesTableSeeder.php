@@ -14,7 +14,7 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
          DB::table('categories')->insert([
-            'name' => str_random(10),
+            'name' => "プログラミング",
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
