@@ -6,9 +6,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8 text-md-left">
             <ul class="c-category_list">
-                <li>カテゴリ：</li>
                 @foreach($board->categories as $category)
-                <li>{{$category->name}}</li>
+                <li class="u-category_name">{{$category->name}}</li>
                 @endforeach
             </ul>
         </div>

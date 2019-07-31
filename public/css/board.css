@@ -10,10 +10,13 @@ p {
     border-bottom: none;
 }
 
-.c-title {}
+.c-title {
+    margin:0;
+}
 
 .c-category_list{
     margin:0;
+    margin-bottom:8px;
     padding:0;
     overflow:hidden;
     list-style:none;
@@ -22,6 +25,13 @@ p {
 .c-category_list li{
     float:left;
     margin-right:10px;
+    padding:0px 2px;
+}
+
+.c-category_list .u-category_name{
+    background-color:#909090;
+    border-radius: 5px;
+    color:white;
 }
 
 .u-board{
