@@ -12,6 +12,18 @@ p {
 
 .c-title {}
 
+.c-category_list{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    list-style:none;
+}
+
+.c-category_list li{
+    float:left;
+    margin-right:10px;
+}
+
 .u-board{
     margin-bottom:32px;
 }

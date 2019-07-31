@@ -2,12 +2,15 @@
 
 
 @section('content')
-@foreach($board->categories as $category)
-@endforeach
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 text-md-left">
-            カテゴリ：{{$category->name}}
+            <ul class="c-category_list">
+                <li>カテゴリ：</li>
+                @foreach($board->categories as $category)
+                <li>{{$category->name}}</li>
+                @endforeach
+            </ul>
         </div>
     </div>
     <div class="row justify-content-center">
