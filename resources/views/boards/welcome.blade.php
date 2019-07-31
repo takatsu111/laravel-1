@@ -8,10 +8,10 @@
         </div>
     </div>
 
+    @foreach($boards as $board)
     <div class="row justify-content-center">
-        @foreach($boards as $board)
         <p><a href="/board/{{$board->id}}">{{$board->name}}</a></p>
-        @endforeach
     </div>
+    @endforeach
 </div>
 @endsection

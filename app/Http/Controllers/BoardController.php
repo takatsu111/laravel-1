@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Content;
 use App\Board;
+use App\Category;
+use App\Content;
 
 
 class BoardController extends Controller
@@ -42,7 +43,8 @@ class BoardController extends Controller
     }
     
     public function new(){
-        return view('boards.create');
+        $categories = Category::get();
+        return view('boards.create',compact('categories'));
     }
     
     public function create(Request $request){

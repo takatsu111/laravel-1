@@ -3,9 +3,13 @@
 
 @section('content')
 @foreach($board->categories as $category)
-<p>{{$category->name}}</p>
 @endforeach
 <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-md-left">
+            カテゴリ：{{$category->name}}
+        </div>
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card p-board u-board">
@@ -32,7 +36,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('boardPost') }}">
                         @csrf
-                        
+
                         <input type="hidden" name="board_id" value="{{ $board['id'] }}">
                         <div class="form-group row justify-content-center">
 
@@ -57,7 +61,7 @@
                             </div>
                         </div>
                     </form>
-            @endauth
+                    @endauth
                 </div>
             </div>
 
