@@ -9,14 +9,16 @@
     </div>
 
     <div class="row justify-content-center">
-    @foreach($boards as $board)
+        @foreach($boards as $board)
         <div class="col-md-4 c-board_item">
             <div>
-            <h4><a href="/board/{{$board->id}}">{{$board->name}}</a></h4>
-            <p>テスト文章です</p>
+                <a href="/board/{{$board->id}}">
+                    <h4>{{$board->name}}</h4>
+                    <p>テスト文章です</p>
+                </a>
             </div>
         </div>
-    @endforeach
+        @endforeach
     </div>
 </div>
 @endsection
