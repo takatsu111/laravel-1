@@ -2,6 +2,9 @@
 
 
 @section('content')
+@error('content_id')
+errorrrrrr
+@enderror
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 text-md-left">
@@ -26,7 +29,7 @@
                     <div class="u-daytime_and_good">
                         <p class="c-paragraph u-daytime">{{$content["created_at"]}}</p>
                         @auth
-                        <form action="" method="GET">
+                        <form action="{{route('boardGood')}}" method="POST">
                         @csrf
                         <button type="submit" name="function" value=@if($content->usersOfGoods->contains($userid)) "delete" @else "insert" @endif class="btn c-paragraph u-good  @if($content->usersOfGoods->contains($userid)) btn-danger @else btn-primary u-active @endif ">いいね:{{$content->usersOfGoods->count()}}</button>
                         <input type="hidden" name="content_id" value="{{$content->id}}">

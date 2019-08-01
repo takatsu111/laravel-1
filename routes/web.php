@@ -28,3 +28,5 @@ Route::post('/board/post', 'BoardController@post')->name('boardPost');
 
 Route::get('/new','BoardController@new')->name('boardnew');
 Route::post('/create','BoardController@create')->name('boardCreate');
+
+Route::post('/board/good','BoardController@good')->name('boardGood');

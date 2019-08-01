@@ -66,6 +66,21 @@ class BoardController extends Controller
         $board -> fill($request->all())->save();
         $lastId = $board -> id;
         $board =  Board::find($lastId);
-        $board -> categories() -> sync([$request->input('category_id')]);
+        $board -> categories() -> attach($request->input('category_id'));
+    }
+    
+    public function good(Request $request){
+        $request -> validate([
+            'function'=>'required|string',
+            'content_id'=>'required|integer'
+        ]);
+        
+        if($request->input('function')=='insert'){
+            Auth::user()->contentsOfGoods()->attach($request->input('content_id'));
+        }else{
+            Auth::user()->contentsOfGoods()->detach($request->input('content_id'));
+        }
+        
+        return back();
     }
 }
