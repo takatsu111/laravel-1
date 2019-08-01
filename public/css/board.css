@@ -94,8 +94,10 @@ p {
 }
 
 .p-board_form{
-    position:fixed;
-    width:20vw;
+/*    position:fixed;*/
+    width:100%;
+/*
     left:100px;
     top:100px;
+*/
 }
