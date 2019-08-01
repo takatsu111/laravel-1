@@ -15,6 +15,8 @@
 //    return view('welcome');
 //});
 
+Route::get('/test','BoardController@test');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -7,10 +7,17 @@ use Illuminate\Support\Facades\Auth;
 use App\Board;
 use App\Category;
 use App\Content;
+use App\User;
 
 
 class BoardController extends Controller
 {
+    public function test(){
+        $user = User::find(6);
+        $content = Content::find(1);
+        return view("boards.test",compact('user','content'));
+    }
+    
     
     public function welcome(){
         $board = new Board;
