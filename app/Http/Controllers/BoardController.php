@@ -15,7 +15,8 @@ class BoardController extends Controller
     public function test(){
         $user = User::find(6);
         $content = Content::find(1);
-        return view("boards.test",compact('user','content'));
+        $userid = Auth::id();
+        return view("boards.test",compact('user','content','userid'));
     }
     
     
@@ -30,7 +31,8 @@ class BoardController extends Controller
         $board = Board::find($id);
             if(empty($board)){return redirect('/')->with("flash_message",__("存在しない掲示板です"));}
         $contents = Content::where('board_id',$id)->orderBy('created_at','desc')->get();
-        return view('boards.show-post',['contents'=>$contents,'board'=>$board]);
+        $userid = Auth::id();
+        return view('boards.show-post',['contents'=>$contents,'board'=>$board,'userid'=>$userid]);
         }else{
             return view('boards.welcome')->with("flash_message",__("存在しない掲示板です"));
         }

@@ -1,2 +1,2 @@
 {{$user->contentsOfGoods[0]->content}}
-{{$content->usersOfGoods->count()}}
+{{$content->usersOfGoods->contains(4)}}
