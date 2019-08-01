@@ -96,6 +96,7 @@ p {
 .p-board_form{
 /*    position:fixed;*/
     width:100%;
+    margin-bottom:24px;
 /*
     left:100px;
     top:100px;
