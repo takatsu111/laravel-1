@@ -26,7 +26,11 @@
                     <div class="u-daytime_and_good">
                         <p class="c-paragraph u-daytime">{{$content["created_at"]}}</p>
                         @auth
-                        <button class="btn c-paragraph u-good  @if($content->usersOfGoods->contains($userid)) btn-danger @else btn-primary u-active @endif ">いいね:{{$content->usersOfGoods->count()}}</button>
+                        <form action="" method="GET">
+                        @csrf
+                        <button type="submit" name="function" value=@if($content->usersOfGoods->contains($userid)) "delete" @else "insert" @endif class="btn c-paragraph u-good  @if($content->usersOfGoods->contains($userid)) btn-danger @else btn-primary u-active @endif ">いいね:{{$content->usersOfGoods->count()}}</button>
+                        <input type="hidden" name="content_id" value="{{$content->id}}">
+                        </form>
                         @else
                         <p class="c-paragraph u-good">いいね:{{$content->usersOfGoods->count()}}</p>
                         @endauth
