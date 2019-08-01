@@ -18,8 +18,8 @@
                 <div class="card-header">
                     <h1 class="c-title">{{ $board['name'] }}</h1>
                 </div>
-                @foreach ($contents as $content)
-
+                @foreach ($board->contentsOrderByDesc as $content)
+                
                 <div class="c-board_content">
                     <p class="c-paragraph u-content_user">{{$content->user['name']}}さん</p>
                     <p class="c-paragraph u-content_text">{{$content["content"]}}</p>
