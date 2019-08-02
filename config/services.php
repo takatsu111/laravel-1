@@ -43,5 +43,11 @@ return [
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
     ],
+    
+    'twitter' => [
+    'client_id' => env('TWITTER_CLIENT_ID'),         // twitterのClient ID
+    'client_secret' => env('TWITTER_CLIENT_SECRET'), // twitterのClient Secret
+    'redirect' => env('CALLBACK_URL'),
+],
 
 ];
