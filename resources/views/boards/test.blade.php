@@ -1,2 +1,1 @@
-aaaaaaaaaaaaaa
-{{$user->user()->getId()}}
+{{$user->getId()}}
