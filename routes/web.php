@@ -30,3 +30,6 @@ Route::get('/new','BoardController@new')->name('boardnew');
 Route::post('/create','BoardController@create')->name('boardCreate');
 
 Route::post('/board/good','BoardController@good')->name('boardGood');
+
+Route::get('/login/{provider}','Auth\SocialAccountController@redirectToProvider');
+Route::get('/login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');

@@ -11,4 +11,15 @@ class SocialAccountController extends Controller
     {
         return \Socialite::driver($provider)->redirect();
     }
+    
+    public function handleProviderCallback($provider)
+    {
+
+        
+            $user = \Socialite::with($provider)->user();
+       
+          
+
+        return view('boards.test',compact('user'));
+    }
 }
