@@ -9,7 +9,18 @@
 
 <!--    <title>{{ config('app.name', 'my掲示板') }}</title>-->
     <title>{{ 'my掲示板'}}</title>
+    @if(strcmp(env('APP_ENV'),'local')==0)
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/board.css') }}" rel="stylesheet">
+    @else
     <!-- Scripts -->
     <script src="{{ secure_asset('js/app.js') }}" defer></script>
 
@@ -20,6 +31,8 @@
     <!-- Styles -->
     <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/board.css') }}" rel="stylesheet">
+    
+    @endif
 </head>
 <body>
     <div id="app">
