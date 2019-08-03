@@ -15,6 +15,6 @@ class SocialAccountController extends Controller
     public function handleProviderCallback($provider)
     {
         $user = \Socialite::with($provider)->stateless()->user();
-        return redirect('/')->with('flash_message',$provider.'アカウントでのログインが完了しました。');
+        return redirect('/')->with('flash_message',$user->getId().'アカウントでのログインが完了しました。');
     }
 }
