@@ -1,40 +1,47 @@
-$(function(){
-    $('.js-form').on('submit',function(e){
+$(function () {
+    $('.js-form').on('submit', function (e) {
         e.preventDefault();
         const $this = $(this);
-        const func = $this.find('button').val();
-        const content_id = $this.find('#content_id').val();
-        const count = Number($this.find('.js-count').text());
-        
-        $this.find('.js-count').text("更新中...");
-        
+        const $button = $this.find('button');
+        const $content = $this.find('#content_id');
+        const $counter = $this.find('.js-count');
+
+        const func = $button.val();
+        const content_id = $content.val();
+        const count = Number($counter.text());
+
+        $counter.text("更新中...");
+        $button.prop("disabled", true);
+
         $.ajax({
-            type:"post",
-            url:"/board/good",
-            datatype:"json",
-            data : { 
+            type: "post",
+            url: "/board/good",
+            datatype: "json",
+            data: {
                 function: func,
-                content_id : content_id,
-                _token : $('input[name="_token"]').val()
-                },
-        }).done(function(){
-            $this.find('button').toggleClass('btn-danger');
-            $this.find('button').toggleClass('btn-primary');
-            
-            
-            if(func==='insert'){
-                $this.find('.js-count').text(1+count);
-                $this.find('button').val('delete');
-            }else{
-                $this.find('.js-count').text((-1)+count);
-                $this.find('button').val('insert');
+                content_id: content_id,
+                _token: $('input[name="_token"]').val()
+            },
+        }).done(function () {
+            $button.toggleClass('btn-danger');
+            $button.toggleClass('btn-primary');
+
+            if (func === 'insert') {
+                $counter.text(1 + count);
+                $button.val('delete');
+            } else {
+                $this.find('.js-count').text((-1) + count);
+                $button.val('insert');
             }
-                        
-        }).fail(function(){
-            $this.find('.js-count').text(count);
-           alert("処理に失敗しました"); 
+
+            $button.prop("disabled", false);
+
+        }).fail(function () {
+            $counter.text(count);
+            alert("処理に失敗しました");
+            $button.prop("disabled", false);
         });
-        
+
     });
-    
+
 })
