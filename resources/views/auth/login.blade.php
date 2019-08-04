@@ -68,7 +68,7 @@
                         <div class="form-group row justify-content-center">
 
                             <div class="c-login_button col-md-6 text-md-center">
-                                <a href="#" style="text-decoration:none;color: white;">
+                                <a href="{{route('socialLogin',['provider'=>'facebook'])}}" style="text-decoration:none;color: white;">
                                 </a>
                                 <i class="fab fa-facebook-square"></i>
                                 facebookアカウントでログインする

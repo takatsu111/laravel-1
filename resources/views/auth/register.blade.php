@@ -61,12 +61,24 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-5">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
                             </div>
+                        </div>
+                        
+                        <div class="form-group row justify-content-center">
+
+                            <div class="c-login_button col-md-6 text-md-center">
+                                <a href="{{route('socialLogin',['provider'=>'facebook'])}}" style="text-decoration:none;color: white;">
+                                </a>
+                                <i class="fab fa-facebook-square"></i>
+                                facebookアカウントで登録する
+
+                            </div>
+
                         </div>
                     </form>
                 </div>
