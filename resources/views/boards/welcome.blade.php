@@ -11,11 +11,12 @@
     <div class="row justify-content-center">
         @foreach($boards as $board)
         <div class="col-md-4 c-board_item">
+
+            <a href="/board/{{$board->id}}">
+            </a>
             <div>
-                <a href="/board/{{$board->id}}">
-                    <h4>{{$board->name}}</h4>
-                    <p>{{$board->contents->find($board->contents->max('id'))["content"]}}</p>
-                </a>
+            <h4>{{$board->name}}</h4>
+            <p>{{$board->contents->find($board->contents->max('id'))["content"]}}</p>
             </div>
         </div>
         @endforeach

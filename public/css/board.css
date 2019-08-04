@@ -37,11 +37,21 @@ p {
 .p-welcome .c-board_item {
     box-sizing: border-box;
     height: 80px;
-    overflow: hidden;
+    position:relative;
+}
+
+.p-welcome .c-board_item div{
+    width:350px;
+    height:100%;
+    background-color:white;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow:hidden;
 }
 
 .p-welcome .c-board_item h4 {
-    margin-top: 8px;
+    margin-top:8px;
+    margin-left:8px
 }
 
 .p-welcome h1 {
@@ -49,21 +59,19 @@ p {
     margin-top: 8px;
 }
 
-.p-welcome .c-board_item div {
-    box-sizing: border-box;
-    height: 80px;
-    background: #58ACFA;
-    border-radius: 1em;
-    box-shadow: 0px 10px 0px 0px;
-}
-
 .p-welcome .c-board_item p {
     color: #545454;
+    margin-left:8px
 }
 
 .p-welcome .c-board_item a {
     color: black;
     text-decoration: none;
+    position:absolute;
+    top:0px;
+    left:15px;
+    width:350px;
+    height:100%;
 }
 
 .u-board {
