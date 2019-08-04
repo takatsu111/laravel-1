@@ -14,7 +14,7 @@
             <div>
                 <a href="/board/{{$board->id}}">
                     <h4>{{$board->name}}</h4>
-                    <p>テスト文章です</p>
+                    <p>{{$board->contents->find($board->contents->max('id'))["content"]}}</p>
                 </a>
             </div>
         </div>
