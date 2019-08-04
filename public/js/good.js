@@ -30,7 +30,7 @@ $(function () {
                 $counter.text(1 + count);
                 $button.val('delete');
             } else {
-                $this.find('.js-count').text((-1) + count);
+                $counter.text((-1) + count);
                 $button.val('insert');
             }
 
