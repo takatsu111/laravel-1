@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-center mb-3">
+    <div class="row mb-3">
         @foreach($boards as $board)
         <div class="col-md-4 c-board_item">
             <div>

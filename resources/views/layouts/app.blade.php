@@ -21,6 +21,7 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/board.css') }}" rel="stylesheet">
     @else
@@ -33,6 +34,7 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     
     <!-- Styles -->
+    <link href="{{ secure_asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/board.css') }}" rel="stylesheet">
 

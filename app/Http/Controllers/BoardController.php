@@ -66,6 +66,7 @@ class BoardController extends Controller
         $lastId = $board -> id;
         $board =  Board::find($lastId);
         $board -> categories() -> attach($request->input('category_id'));
+        return redirect("/");
     }
     
     public function good(Request $request){
