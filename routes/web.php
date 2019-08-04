@@ -33,3 +33,6 @@ Route::post('/board/good','BoardController@good')->name('boardGood');
 
 Route::get('/login/{provider}','Auth\SocialAccountController@redirectToProvider')->name('socialLogin');
 Route::get('/login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');
+
+Route::get('/mypage', 'BoardController@mypage')->name('mypage');
+Route::post('/mypage/edit', 'BoardController@editMypage')->name('editMypage');

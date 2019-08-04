@@ -82,4 +82,21 @@ class BoardController extends Controller
         
 //        return back();
     }
+    
+    public function mypage(){
+        $user=Auth::user();
+        return view("boards.mypage",compact('user'));
+    }
+    
+    public function editMypage(Request $request){
+        $request -> validate([
+            'name'=>'required|string|max:191|unique:users,name',
+            'email'=>'required|email|unique:users,email'
+        ]);
+        
+        Auth::user()->fill($request->all())->update();
+            
+        return redirect('/mypage')->with("flash_message","変更が完了しました。");
+        
+    }
 }
