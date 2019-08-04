@@ -11,67 +11,76 @@ p {
 }
 
 .c-title {
-    margin:0;
+    margin: 0;
 }
 
-.c-category_list{
-    margin:0;
-    margin-bottom:8px;
-    padding:0;
-    overflow:hidden;
-    list-style:none;
+.c-category_list {
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
 }
 
-.c-category_list li{
-    float:left;
-    margin-right:10px;
-    padding:0px 2px;
+.c-category_list li {
+    float: left;
+    margin-right: 10px;
+    padding: 0px 2px;
 }
 
-.c-category_list .u-category_name{
-    background-color:#909090;
+.c-category_list .u-category_name {
+    background-color: #909090;
     border-radius: 5px;
-    color:white;
+    color: white;
 }
 
-.p-welcome .c-board_item{
-    box-sizing:border-box;
-    height:80px;
+.p-welcome .c-board_item {
+    box-sizing: border-box;
+    height: 80px;
     overflow: hidden;
 }
 
-.p-welcome .c-board_item h4{
-    margin-top:8px;
+.p-welcome .c-board_item h4 {
+    margin-top: 8px;
 }
 
-.p-welcome h1{
-    margin-bottom:32px;
-    margin-top:8px;
+.p-welcome h1 {
+    margin-bottom: 32px;
+    margin-top: 8px;
 }
 
-.p-welcome .c-board_item div{
-    box-sizing:border-box;
-    height:80px;
-    background:#58ACFA;
+.p-welcome .c-board_item div {
+    box-sizing: border-box;
+    height: 80px;
+    background: #58ACFA;
     border-radius: 1em;
-    box-shadow:0px 10px 0px 0px;
+    box-shadow: 0px 10px 0px 0px;
 }
 
-.p-welcome .c-board_item p{
-    color:#545454;
+.p-welcome .c-board_item p {
+    color: #545454;
 }
 
-.p-welcome .c-board_item a{
-    color:black;
+.p-welcome .c-board_item a {
+    color: black;
     text-decoration: none;
 }
 
-.u-board{
-    margin-bottom:32px;
+.u-board {
+    margin-bottom: 32px;
 }
 
 .p-board p {
     margin-bottom: 1em;
+}
+
+.p-board button {
+    margin-bottom: 1em;
+    outline: none;
+}
+
+.p-board a {
+    outline: none;
 }
 
 .p-board .u-content_user {
@@ -93,24 +102,24 @@ p {
     margin: 0;
 }
 
-.p-board_form{
-    width:100%;
-    margin-bottom:24px;
+.p-board_form {
+    width: 100%;
+    margin-bottom: 24px;
 }
 
-.c-login_button{
-    background-color:#3b5998;
-    color:white;
-    border-radius:6px;
-    padding:10px 16px;
-    font-size:18px;
-    position:relative;
+.c-login_button {
+    background-color: #3b5998;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 18px;
+    position: relative;
 }
 
-.c-login_button a{
-    position:absolute;
-    top:0px;
-    left:0px;
-    width:359px;
-    height:48px;
+.c-login_button a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 359px;
+    height: 48px;
 }
