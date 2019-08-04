@@ -4,6 +4,9 @@ $(function(){
         const $this = $(this);
         const func = $this.find('button').val();
         const content_id = $this.find('#content_id').val();
+        const count = Number($this.find('.js-count').text());
+        
+        $this.find('.js-count').text("更新中...");
         
         $.ajax({
             type:"post",
@@ -17,7 +20,7 @@ $(function(){
         }).done(function(){
             $this.find('button').toggleClass('btn-danger');
             $this.find('button').toggleClass('btn-primary');
-            const count = Number($this.find('.js-count').text());
+            
             
             if(func==='insert'){
                 $this.find('.js-count').text(1+count);
@@ -28,6 +31,7 @@ $(function(){
             }
                         
         }).fail(function(){
+            $this.find('.js-count').text(count);
            alert("処理に失敗しました"); 
         });
         

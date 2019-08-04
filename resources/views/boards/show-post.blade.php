@@ -81,5 +81,5 @@ errorrrrrr
         </div>
     </div>
 </div>
-<script src="{{ asset('js/js.js') }}" defer></script>
+<script src="{{ asset('js/good.js') }}" defer></script>
 @endsection

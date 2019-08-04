@@ -76,14 +76,6 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
                                 
                                 <a class="dropdown-item" href="{{route('mypage')}}" onclick="event.preventDefault();
                                                      document.getElementById('mypage-form').submit();">
@@ -93,6 +85,25 @@
                                 <form id="mypage-form" action="{{route('mypage')}}" method="GET" style="display: none;">
                                     @csrf
                                 </form>
+                                
+                                <a class="dropdown-item" href="{{ route('boardNew') }}" onclick="event.preventDefault();
+                                                     document.getElementById('boardNew-form').submit();">
+                                    {{ __('New Board') }}
+                                </a>
+
+                                <form id="boardNew-form" action="{{ route('boardNew') }}" method="GET" style="display: none;">
+                                    @csrf
+                                </form>
+                                
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                                
                             </div>
                             
                         </li>
