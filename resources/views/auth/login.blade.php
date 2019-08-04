@@ -64,13 +64,19 @@
                                 @endif
                             </div>
                         </div>
-                        
+
                         <div class="form-group row justify-content-center">
-                            <div class="col-md-6 text-md-center" style="background-color:#3b5998;color:white;border-radius:6px;padding:10px 16px;font-size:18px;">
-                                <i class="fab fa-facebook-square"></i><a href="#" style="text-decoration:none;color: white;">facebookアカウントでログインする</a>
+
+                            <div class="c-login_button col-md-6 text-md-center">
+                                <a href="#" style="text-decoration:none;color: white;">
+                                </a>
+                                <i class="fab fa-facebook-square"></i>
+                                facebookアカウントでログインする
+
                             </div>
+
                         </div>
-                        
+
                     </form>
                 </div>
             </div>
