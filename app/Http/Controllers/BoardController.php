@@ -12,11 +12,11 @@ use App\User;
 
 class BoardController extends Controller
 {
-    public function test(){
-        $user = User::find(6);
-        $content = Content::find(1);
-        $userid = Auth::id();
-        return view("boards.test",compact('user','content','userid'));
+    public function test(Request $request){
+        $request -> validate([
+            'function'=>'required|string',
+            'content_id'=>'required|integer'
+        ]);
     }
     
     
@@ -80,6 +80,6 @@ class BoardController extends Controller
             Auth::user()->contentsOfGoods()->detach($request->input('content_id'));
         }
         
-        return back();
+//        return back();
     }
 }

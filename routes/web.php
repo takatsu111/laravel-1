@@ -15,7 +15,7 @@
 //    return view('welcome');
 //});
 
-Route::get('/test','BoardController@test');
+Route::post('/test','BoardController@test');
 
 Auth::routes();
 

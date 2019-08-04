@@ -30,10 +30,10 @@ errorrrrrr
                     <div class="u-daytime_and_good">
                         <p class="c-paragraph u-daytime">{{$content["created_at"]}}</p>
                         @auth
-                        <form action="{{route('boardGood')}}" method="POST">
+                        <form action="{{route('boardGood')}}" method="POST" class="js-form">
                             @csrf
-                            <button type="submit" name="function" value=@if($content->usersOfGoods->contains($userid)) "delete" @else "insert" @endif class="btn c-paragraph u-good @if($content->usersOfGoods->contains($userid)) btn-danger @else btn-primary u-active @endif ">いいね:{{$content->usersOfGoods->count()}}</button>
-                            <input type="hidden" name="content_id" value="{{$content->id}}">
+                            <button type="submit" name="function" value=@if($content->usersOfGoods->contains($userid)) "delete" @else "insert" @endif class="btn c-paragraph u-good @if($content->usersOfGoods->contains($userid)) btn-danger @else btn-primary u-active @endif ">いいね:<span class="js-count">{{$content->usersOfGoods->count()}}</span></button>
+                            <input id="content_id" type="hidden" name="content_id" value="{{$content->id}}">
                         </form>
                         @else
                         <p class="c-paragraph u-good">いいね:{{$content->usersOfGoods->count()}}</p>
@@ -81,5 +81,5 @@ errorrrrrr
         </div>
     </div>
 </div>
-
+<script src="{{ asset('js/js.js') }}" defer></script>
 @endsection
