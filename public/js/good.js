@@ -23,8 +23,8 @@ $(function () {
                 _token: $('input[name="_token"]').val()
             },
         }).done(function () {
-            $button.toggleClass('btn-danger');
             $button.toggleClass('btn-primary');
+            $button.toggleClass('btn-outline-primary');
 
             if (func === 'insert') {
                 $counter.text(1 + count);

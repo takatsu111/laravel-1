@@ -32,7 +32,7 @@ errorrrrrr
                         @auth
                         <form action="{{route('boardGood')}}" method="POST" class="js-form">
                             @csrf
-                            <button type="submit" name="function" value=@if($content->usersOfGoods->contains($userid)) "delete" @else "insert" @endif class="btn c-paragraph u-good @if($content->usersOfGoods->contains($userid)) btn-danger @else btn-primary u-active @endif ">いいね:<span class="js-count">{{$content->usersOfGoods->count()}}</span></button>
+                            <button type="submit" name="function" value=@if($content->usersOfGoods->contains($userid)) "delete" @else "insert" @endif class="btn c-paragraph u-good @if($content->usersOfGoods->contains($userid)) btn-primary @else btn-outline-primary u-active @endif ">いいね:<span class="js-count">{{$content->usersOfGoods->count()}}</span></button>
                             <input id="content_id" type="hidden" name="content_id" value="{{$content->id}}">
                         </form>
                         @else
