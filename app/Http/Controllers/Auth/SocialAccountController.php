@@ -23,5 +23,7 @@ class SocialAccountController extends Controller
             Auth::login($login_user);
             return redirect('/')->with('flash_message',$user->getId().'アカウントでのログインが完了しました。');
         }
+        
+        return redirect('/')->with('flash_message',$user->getId().'アカウントが見つかりませんでした。新規登録してください');
     }
 }
