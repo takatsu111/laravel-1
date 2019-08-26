@@ -1,5 +1,5 @@
 # 掲示板(制作物1作目)
-https://dashboard.heroku.com/apps/lit-wave-73633  
+https://lit-wave-73633.herokuapp.com/  
 1カ月の勉強を経て、2週間で制作した簡易な掲示板です。  
 HTML・CSS・MySQL・Laravelを使いました。  
 以下の機能を実装しました。  
